@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+    db:
+        image: atestcr.azurecr.io/postgres:latest
+        environment:
+            POSTGRES_PASSWORD: postgres
+    app:
+        image: atestcr.azurecr.io/my_app:latest
+        ports:
+            - '8501:8501'
